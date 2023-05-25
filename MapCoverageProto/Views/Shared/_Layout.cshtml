@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MapCoverageProto</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MapCoverageProto.styles.css" asp-append-version="true" />
+</head>
+<body style="background-color:#182335;">
+    <div class="topHeading">
+        <button type="submit" class="contact">Contact us</button>
+        <button type="submit" class="Login">AST Login</button>
+    </div>
+    <header style="background-color: white;">
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" id="navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" ><img class="ASTLOGO" src="~/AST logo.png"/></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="NavOptions navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    
+    
+    <div class="main2" >
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer border-top footer text-muted ">
+        <div class="footerText pb-1" >
+            
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+
+    <style>
+        .ASTLOGO{
+            height:65px;
+        }
+        .contact{
+            background-color: orange;
+            color: white;
+            border: none;
+            right: 105px;
+            width: 100px;
+            height: 45px;
+            position: fixed;
+        }
+        .Login{
+            background-color: #12273b;
+            color: white;
+            border: none;
+            right: 5px;
+            width: 100px;
+            height: 45px;
+            position:fixed;
+        }
+        .topHeading{
+            height: 45px;
+            width: 100%;
+            position: fixed;
+            background-color: #12273b;
+            padding-top: 0px;
+            z-index:1;
+        }
+        .navbar{
+            position:fixed;
+            margin-top:45px;
+            width: 100%;
+            z-index:1;
+        }
+        
+    </style>
+
+</body>
+</html>

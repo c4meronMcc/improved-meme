@@ -1,0 +1,41 @@
+﻿@{ 
+    ViewData["Title"] = "Home Page";
+    
+}
+<div class="images">
+        <img src="~/containerHeader.jpg" alt="Container" style="width:100% ; z-index:1;" class="headerImg" />
+        <div class="center"><h1>Finding your coverage Area</h1>
+            <p>Click on where you are going on the map below and you can find the satellite service for you</p></div>
+</div>
+<div class="div2">
+   <img src="~/detailedGreyMapAlaska.jpg" alt="interactiveMap" class="interactiveMap"/>
+</div>
+<styl>
+    .div2{
+        background-color:;
+    }
+    .images{
+        position:relative;
+        text-align:center;
+        color:white;
+        
+    }
+    .center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%)
+    }
+    .headerImg{
+        filter: brightness(30%) ;
+    }
+    .interactiveMap{
+        display: block;
+        margin-left:auto;
+        margin-right: auto;
+        width:50%;
+        margin-top:5%;
+        border:solid 5px orange;
+    }
+     
+</style>
